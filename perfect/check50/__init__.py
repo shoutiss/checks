@@ -1,6 +1,6 @@
 from check50 import *
 
-class Perfect(checks):
+class Perfect(Checks):
     
     @check()
     def exists(self):
