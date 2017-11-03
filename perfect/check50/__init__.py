@@ -25,7 +25,7 @@ class Perfect(Checks):
     @check("compiles")
     def test_24(self):
         """input of 24 yields output of  36\n YES\n"""
-        self.spawn("./perfect").stdin("28").stdout("36\nNO\n", "36\nNO\n").exit(0)
+        self.spawn("./perfect").stdin("24").stdout("36\nNO\n", "36\nNO\n").exit(0)
     
     @check("compiles")
     def test_reject_negative(self):
