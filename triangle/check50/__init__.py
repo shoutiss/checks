@@ -19,6 +19,11 @@ class Triangle(Checks):
 
     @check("compiles")
     def test_3_4_10(self):
-        """input of 28 yields output of  28\n YES\n"""
+        """input of 3, 4, 10 yields output of NO\n"""
         self.spawn("./triangle").stdin("3").stdin("4").stdin("10").stdout("NO\n", "NO\n").exit(0)
+
+    @check("compiles")
+    def test_neg3_4_5(self):
+        """input of -3, 4, 5 yields output of NO\n"""
+        self.spawn("./triangle").stdin("-3").stdin("4").stdin("5").stdout("NO\n", "NO\n").exit(0)
 
