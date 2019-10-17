@@ -5,7 +5,7 @@ import check50.c
 @check50.check()
 def compiles():
     """broken.c compiles"""
-    check50.c.compile("broken.c")
+    check50.c.compile("broken.c", lcs50=True)
 
 @check50.check(compiles)
 def sums_1_5():
