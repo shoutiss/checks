@@ -25,7 +25,7 @@ def sum_10_15_20(self):
 @check("compiles")
 def sum_neg4_neg3_neg2_(self):
     """Finds the sum of -4, -3, -2"""
-    check50.run("./sigma -4, -3, -2").stdout("-9\n").exit(0)
+    check50.run("./sigma -4 -3 -2").stdout("-9\n").exit(0)
 
 @check("compiles")
 def rejects_no_commands(self):
