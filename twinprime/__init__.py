@@ -8,7 +8,7 @@ def exists():
     check50.exists("twinprime.c")
 
 @check50.check()
-def compiles():
+def compiles(exists):
     """twinprime.c compiles"""
     check50.c.compile("twinprime.c", lcs50=True)
 
