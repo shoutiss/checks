@@ -2,13 +2,13 @@
 import check50
 import check50.c
 
-@check50.check()
-def exists():
-    """twinprime.c exists"""
-    check50.exists("twinprime.c")
+# @check50.check()
+# def exists():
+#     """twinprime.c exists"""
+#     check50.exists("twinprime.c")
 
 @check50.check()
-def compiles(exists):
+def compiles():
     """twinprime.c compiles"""
     check50.c.compile("twinprime.c", lcs50=True)
 
