@@ -20,4 +20,4 @@ def compare_8():
 @check50.check(compiles)
 def compare_12():
     """Compares 15! to 5^15"""
-    check50.run("./compare").stdin("12").stdout("15! is larger.\n").exit(0)
+    check50.run("./compare").stdin("15").stdout("15! is larger.\n").exit(0)
