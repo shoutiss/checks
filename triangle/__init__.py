@@ -27,6 +27,11 @@ def test_neg3_4_5():
     check50.run("./triangle").stdin("-3").stdin("4").stdin("5").stdout("NO\n", regex=False).exit(0)
 
 @check50.check(compiles)
+def test_2_3_5():
+    """2, 3, 5 yields NO\n"""
+    check50.run("./triangle").stdin("2").stdin("3").stdin("5").stdout("NO\n", regex=False).exit(0)
+
+@check50.check(compiles)
 def test_reject_nonintegers():
     """rejects non-integer values"""
     check50.run("./triangle").stdin("3.5").reject().stdin("2.7").reject().stdin("-0.5").reject()
