@@ -1,8 +1,19 @@
-// Helper functions
+/**
+ * Bubble Sort
+ * Fill out the skeleton below to implement a bubble sort
+ * Your sort must "bubble" larger values to the right of the list
+ * Pay attention to the places where you must enter code - don't change anything that was
+ * already present!
+ *
+ * Checking for correctness
+ * 1. To compile, type: make sort
+ * 2. Test by running ./sort
+ * 3. When you are done entering items, hit ctrl d
+ * 2. Check50: check50 shoutiss/checks/master/bubble
+ */
 
 #include <cs50.h>
 #include <stdio.h>
-
 #include "bubble.h"
 
 
@@ -12,34 +23,25 @@ void bubble(int values[], int n)
      // Iterate through array n times
     for (int i = 0; i < n; i++)
     {
-        bool swapped = false;
-        // Compare adjacent values
-        for (int j = 1; j < n - i; j++)
-        {
-            // If left is larger, swap the values
-            if (values[j - 1] > values[j])
-            {
-                int temp = values[j - 1];
-                values[j - 1] = values[j];
-                values[j] = temp;
-                swapped = true;
-            }
-        }
+        // TODO: Implement sorting algorithm
+
+
+
+        // Prints the current step of your sorting
+        // This must stay in the for loop that begins on line 22.
+        // Also ensure that this line does not end up in any loops you create for your sorting...
         print_array(values, n);
 
-        // No swaps means we're done
-        if (!swapped)
-        {
-            return;
-        }
+        //TODO: Make sure your algorithm recognizes an already sorted list
     }
     return;
 }
 
 void print_array(int values[], int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
     {
-        printf("%i\n", values[i]);
+        printf("%i ", values[i]);
     }
+    printf("%i\n", values[n-1]);
 }

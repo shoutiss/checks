@@ -4,6 +4,7 @@
  *
  * Usage: ./sort
  *
+ * DO NOT CHANGE ANYTING IN THIS FILE
  */
 
 #include <cs50.h>
@@ -38,9 +39,4 @@ int main(void)
     // sort the haystack
     bubble(haystack, size);
 
-    // print the haystack, one item per line
-    for (int i = 0; i < size; i++)
-    {
-        printf("%i\n", haystack[i]);
-    }
 }

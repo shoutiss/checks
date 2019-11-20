@@ -29,15 +29,14 @@ def test_sorted(items):
                 items[j] = items[j + 1]
                 items[j + 1] = temp
                 no_swaps = False
-        steps.append(items)
+        steps.append(items.copy())
         if no_swaps:
             break
-    for step in steps:
-        for item in step:
-            p.stdout(str(item))
 
-    for i in sorted(items):
-        p.stdout(str(i))
+
+    for step in steps:
+        p.stdout(" ".join(str(item) for item in step))
+
     p.exit(0)
 
 @check50.check(compiles)
@@ -49,3 +48,8 @@ def sort_reversed():
 def sort_shuffled():
     """sorts {5,3,1,2,4,6}"""
     test_sorted([5, 3, 1, 2, 4, 6])
+
+@check50.check(compiles)
+def sort_sorted():
+    """ Recognizes an already sorted array"""
+    test_sorted([1, 2, 3, 4, 5])

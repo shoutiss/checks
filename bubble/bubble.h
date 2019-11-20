@@ -1,5 +1,5 @@
 /**
- * helpers.h
+ * bubble.h
  *
  * Helper functions for bubble sorting
  */
