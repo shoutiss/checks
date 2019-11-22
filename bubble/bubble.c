@@ -26,12 +26,10 @@ void bubble(int values[], int n)
         // TODO: Implement sorting algorithm
 
 
-
         // Prints the current step of your sorting
         // This must stay in the for loop that begins on line 24.
         // Also ensure that this line does not end up in any loops you create for your sorting...
         print_array(values, n);
-
         //TODO: Make sure your algorithm recognizes an already sorted list
     }
     return;
