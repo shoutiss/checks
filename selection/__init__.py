@@ -9,7 +9,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """selection.c compiles."""
-    check50.include("selection.h", "selection.c", "sort.c")
+    check50.include("selection.h", "sort.c")
     check50.c.compile("sort.c", "selection.c", lcs50=True)
 
 def test_sorted(items):

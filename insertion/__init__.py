@@ -3,14 +3,14 @@ import check50.c
 
 @check50.check()
 def exists():
-    """bubble.c exists."""
-    check50.exists("bubble.c")
+    """insertion.c exists."""
+    check50.exists("insertion.c")
 
 @check50.check(exists)
 def compiles():
-    """bubble.c compiles."""
-    check50.include("bubble.h", "bubble.c", "sort.c")
-    check50.c.compile("sort.c", "bubble.c", lcs50=True)
+    """insertion.c compiles."""
+    check50.include("insertion.h", "sort.c")
+    check50.c.compile("sort.c", "insertion.c", lcs50=True)
 
 def test_sorted(items):
     p = check50.run("./sort")
@@ -46,8 +46,3 @@ def sort_reversed():
 def sort_shuffled():
     """sorts {5,3,1,2,4,6}"""
     test_sorted([5, 3, 1, 2, 4, 6])
-
-@check50.check(compiles)
-def sort_sorted():
-    """ Recognizes an already sorted array"""
-    test_sorted([1, 2, 3, 4, 5])
