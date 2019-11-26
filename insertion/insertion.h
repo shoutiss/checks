@@ -1,7 +1,7 @@
 /**
- * bubble.h
+ * insertion.h
  *
- * Helper functions for bubble sorting
+ * Helper functions for insertion sorting
  */
 
 #include <cs50.h>

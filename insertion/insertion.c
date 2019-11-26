@@ -1,6 +1,6 @@
 /**
- * Bubble Sort
- * Fill out the skeleton below to implement a bubble sort
+ * insertion Sort
+ * Fill out the skeleton below to implement a insertion sort
  * Your sort must be an insertion sort - don't think of this as swapping values!
  * Pay attention to the places where you must enter code - don't change anything that was
  * already present!
@@ -17,8 +17,8 @@
 #include "insertion.h"
 
 
-// Implements a bubble sort on an array of values
-void bubble(int values[], int n)
+// Implements a insertion sort on an array of values
+void insertion(int values[], int n)
 {
      // Iterate through array n times
     for (int i = 0; i < n; i++)
