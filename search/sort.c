@@ -15,7 +15,7 @@
 // maximum amount of hay
 const int MAX = 65536;
 
-int main(int argc, string argv[])
+int main(void)
 {
     fprintf(stderr, "RUNNING SORT\n");
     // fill haystack
