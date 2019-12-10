@@ -50,5 +50,5 @@ def sort_shuffled():
 
 @check50.check(compiles)
 def sort_sorted():
-    """ Recognizes an already sorted array"""
-    test_sorted([1, 2, 3, 4, 5])
+    """Doesn't try to quit early"""
+    test_sorted([1, 5, 4, 3, 2])
