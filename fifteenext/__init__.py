@@ -14,13 +14,15 @@ def compiles():
 def test_solvable(size):
     out = check50.run("./fifteenext " + size).stdout()
     print(out)
+    return out
 
 
 
 @check50.check(compiles)
 def test_3x3():
     """Solvable 3x3?"""
-    print(test_solvable('3'))
+    out = test_solvable('3')
+    print(out)
 
 # @check50.check(compiles)
 # def sort_shuffled():
