@@ -20,7 +20,7 @@ def test_solvable(size):
 @check50.check(compiles)
 def test_3x3():
     """Solvable 3x3?"""
-    raise check50.Failure("testing: ", help = check50.run("./fifteenext " + size).stdout())
+    raise check50.Failure("testing: ", help = check50.run("./fifteenext " + '3').stdout())
     # out = test_solvable('3')
     print(out)
 
