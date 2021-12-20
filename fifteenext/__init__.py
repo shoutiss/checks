@@ -12,8 +12,8 @@ def compiles():
     check50.c.compile("fifteenext.c", lcs50=True)
 
 def test_solvable(size):
-    out = check50.run("./fifteenext " + size).stdout()
-    raise check50.Failure("testing: ", help = out)
+    # out = check50.run("./fifteenext " + size).stdout()
+    raise check50.Failure("testing: ", help = check50.run("./fifteenext " + size).stdout())
 
 
 
