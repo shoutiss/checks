@@ -13,8 +13,7 @@ def compiles():
 
 def test_solvable(size):
     out = check50.run("./fifteenext " + size).stdout()
-    print(out)
-    return out
+    raise check50.Failure("testing: ", help = out)
 
 
 
