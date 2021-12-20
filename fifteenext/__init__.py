@@ -20,7 +20,7 @@ def compiles():
 @check50.check(compiles)
 def test_3x3():
     """Solvable 3x3?"""
-    out = check50.run("./fifteenext 3").stdin(0).stdout()
+    out = check50.run("./fifteenext 3").stdin("0").stdout()
     print(out)
     check50.log(out)
     raise check50.Failure("testing: ", help = out)
