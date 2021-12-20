@@ -11,16 +11,19 @@ def compiles():
     """fifteenext.c compiles."""
     check50.c.compile("fifteenext.c", lcs50=True)
 
-def test_solvable(size):
-    out = check50.run("./fifteenext " + size).stdout()
-    raise check50.Failure("testing: ", help = check50.run("./fifteenext " + size).stdout())
+# def test_solvable(size):
+#     out = check50.run("./fifteenext " + size).stdout()
+#     raise check50.Failure("testing: ", help = check50.run("./fifteenext " + size).stdout())
 
 
 
 @check50.check(compiles)
 def test_3x3():
     """Solvable 3x3?"""
-    raise check50.Failure("testing: ", help = check50.run("./fifteenext " + '3').stdout())
+    out = check50.run("./fifteenext 3").stdout()
+    print(out)
+    check50.log(out)
+    raise check50.Failure("testing: ", help = out)
     # out = test_solvable('3')
     print(out)
 
