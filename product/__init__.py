@@ -14,5 +14,5 @@ def compiles():
 
 @check50.check(compiles)
 def compare_8():
-    """Calculate correct largets product"""
+    """Calculate correct largest product"""
     check50.run("./product").stdout("70600674\n").exit(0)
