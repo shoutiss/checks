@@ -1,3 +1,18 @@
+/*
+ * The grid below is 20 x 20 and filled with integers.
+ * Your task is to find the LARGEST possible product of
+ * 4 adjacent integers in any direction (within a row, column
+ * or diagonal).
+ *
+ * Your approach to this task is up to you - it may be helpful
+ * to write helper functions and you are welcome to do so. It is not
+ * required.
+ *
+ * Check50: check50 shoutiss/checks/master/product
+ * Submit50: submit50 shoutiss/checks/master/product
+ */
+
+
 #include <stdio.h>
 #include <cs50.h>
 
@@ -25,81 +40,8 @@ int grid[DIM][DIM] = {{8,2,22,97,38,15,0,40,0,75,4,05,07,78,52,12,50,77,91,8},
                     {01,70,54,71,83,51,54,69,16,92,33,48,61,43,52,01,89,19,67,48}};
 
 
-int find_max(int num1, int num2, int num3, int num4);
-
 int main(void)
 {
-    // Store max product
-    long long max = 0;
+    // TODO
 
-
-    // Iterate through grid
-    for (int i = 0; i < DIM; i++)
-    {
-        for (int j = 0; j < DIM; j++)
-        {
-            long long largest = 0;
-            long long row_product = grid[i][j];
-            long long col_product = grid[i][j];
-            long long diag_product = grid[i][j];
-            long long up_right = grid[i][j];
-
-            // Iterate to add to row/col/both
-            for (int box = 1; box < 4; box++)
-            {
-                // Checking row:
-                if (j < DIM - 4)
-                {
-
-                    row_product = row_product * grid[i][j + box];
-                }
-                // checking col
-                if (i < DIM - 4)
-                {
-                    col_product = col_product * grid[i + box][j];
-                }
-                // Checking diagonal
-                if (i < DIM - 4 && j <  DIM - 4)
-                {
-                    diag_product = diag_product * grid[i + box][j + box];
-                }
-                // Checking up diag
-                if (i > 2 && j < DIM - 4)
-                {
-                    up_right = up_right * grid[i - box][j + box];
-                }
-            }
-            // printf("row: %lli  col: %lli  diag: %lli\n", row_product, col_product, diag_product);
-            largest = find_max(row_product, col_product, diag_product, up_right);
-            if (largest > max)
-            {
-                max = largest;
-                printf("i: %i j: %i grid: %i\n", i, j, grid[i][j]);
-            }
-
-
-        }
-    }
-
-    printf("Max value: %lli\n", max);
-}
-
-int find_max(int num1, int num2, int num3, int num4)
-{
-    int max = num1;
-
-    if (num2 > max)
-    {
-        max = num2;
-    }
-    if (num3 > max)
-    {
-        max = num3;
-    }
-    if (num4 > max)
-    {
-        max = num4;
-    }
-
-    return max;
 }
