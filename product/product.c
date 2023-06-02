@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * The grid below is 20 x 20 and filled with integers.
  * Your task is to find the LARGEST possible product of
@@ -42,3 +43,8 @@ int main(void)
 {
     // TODO
 }
+=======
+
+    return max;
+}
+>>>>>>> parent of 62d7a08 (Fri, Jun 2, 2023, 9:34 AM -04:00)
