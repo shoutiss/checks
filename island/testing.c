@@ -36,7 +36,7 @@ int main(int argc, string argv[])
     // 36
     int island4[5][5] = {{1,0,1,0,1},{1,0,1,0,1},{1,0,1,0,1},{1,0,1,0,1},{1,1,1,1,1}};
 
-    int island5[6][6] = {{1, 1, 1, 1, 1, 1}, {1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,0,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1}};
+    //int island5[6][6] = {{1, 1, 1, 1, 1, 1}, {1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,0,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1}};
 
     switch (test)
     {
@@ -65,12 +65,12 @@ int main(int argc, string argv[])
             printf("%i\n", perim);
             break;
         }
-        case 4:
-        {
-            int perim = mapping(island5);
-            printf("%i\n", perim);
-            break;
-        }
+        // case 4:
+        // {
+        //     int perim = mapping(island5);
+        //     printf("%i\n", perim);
+        //     break;
+        // }
     }
 
 

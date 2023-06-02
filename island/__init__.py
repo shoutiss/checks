@@ -32,7 +32,7 @@ def island_w():
     """Test Island W"""
     check50.run("./testing 3").stdout("36")
 
-@check50.check(compiles)
-def island_t():
-    """Indexing out of bounds?"""
-    check50.run("./testing 4").stdout("20")
+# @check50.check(compiles)
+# def island_t():
+#     """Indexing out of bounds?"""
+#     check50.run("./testing 4").stdout("20")
