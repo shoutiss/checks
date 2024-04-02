@@ -1,7 +1,7 @@
 check50:
   files: &check50_files
     - !exclude "*"
-    - !require create.*
+    - !include create.*
 
 submit50:
   files: *check50_files
